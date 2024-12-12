@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mcoalworks/screens/app_navigation.dart';
 import 'package:provider/provider.dart';
 import 'package:mcoalworks/providers/auth_provider.dart';
-import 'package:mcoalworks/screens/home_screen.dart';
 import 'package:mcoalworks/screens/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -24,9 +24,9 @@ class _SplashScreenState extends State<SplashScreen> {
     final authProvider = Provider.of<AuthProvider>(context, listen: false);
     await authProvider.checkLoginStatus();
 
-    if (authProvider.isLoggedIn) {
+    if (true) {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => const HomeScreen()),
+        MaterialPageRoute(builder: (_) => AppNavigation()),
       );
     } else {
       Navigator.of(context).pushReplacement(

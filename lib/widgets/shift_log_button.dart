@@ -19,7 +19,7 @@ class ShiftLogButton extends StatelessWidget {
               );
             }
           : null,
-      child: const Text('Submit Shift Log'),
+      child: Text('Submit Shift Log'),
     );
   }
 }

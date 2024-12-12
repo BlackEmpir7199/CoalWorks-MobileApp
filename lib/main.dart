@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mcoalworks/providers/navigation_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:mcoalworks/providers/theme_provider.dart';
 import 'package:mcoalworks/screens/splash_screen.dart';
@@ -11,6 +12,7 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (_) => AuthProvider()),
         ChangeNotifierProvider(create: (_) => ThemeProvider()),
+        ChangeNotifierProvider(create: (_) => NavigationProvider()),
       ],
       child: const MyApp(),
     ),
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
       builder: (context, themeProvider, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Coal Mine Operations',
+          title: 'CoalWorks Mobile',
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           themeMode: themeProvider.themeMode,

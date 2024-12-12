@@ -130,7 +130,7 @@ class _UserInfoCardState extends State<UserInfoCard> {
               child: widget.user.profileImage == null
                   ? Text(
                       widget.user.username[0].toUpperCase(),
-                      style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                      // style: AppTheme.darkTheme.textTheme.bodySmall,
                     )
                   : null,
             ),
